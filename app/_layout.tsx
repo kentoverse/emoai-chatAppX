@@ -7,6 +7,10 @@ import 'react-native-reanimated';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
 
+import theme from '../assets/styles/theme';
+import '@aws-amplify/ui-react/styles.css';
+import { ThemeProvider as MUIThemeProvider } from '@mui/material';
+
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
@@ -27,11 +31,13 @@ export default function RootLayout() {
   }
 
   return (
+    <MUIThemeProvider theme={theme}>
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
       </Stack>
     </ThemeProvider>
+    </MUIThemeProvider>
   );
 }

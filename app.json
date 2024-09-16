@@ -31,6 +31,12 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "028309a4-7985-4b36-b877-3888136cf3c3"
+      }
+    },
+    "owner": "kentoverse"
   }
 }
