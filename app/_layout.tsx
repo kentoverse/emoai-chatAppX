@@ -8,7 +8,6 @@ import 'react-native-reanimated';
 import { useColorScheme } from '@/hooks/useColorScheme';
 
 import theme from '../assets/styles/theme';
-import '@aws-amplify/ui-react/styles.css';
 import { ThemeProvider as MUIThemeProvider } from '@mui/material';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
